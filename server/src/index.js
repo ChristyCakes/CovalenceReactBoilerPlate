@@ -4,11 +4,13 @@ import express from 'express';
 import morgan from 'morgan';
 import routes from './routes';
 import stateRouting from './middleware/routing.mw';
+import cors from 'cors';
 
 const CLIENT_PATH = join(__dirname, '../../client');
 
 let app = express();
 
+app.use(cors());
 app.use(morgan('dev'));
 app.use(express.static(CLIENT_PATH));
 app.use(express.json());

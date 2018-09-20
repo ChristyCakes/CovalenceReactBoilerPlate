@@ -1,3 +1,5 @@
+// remove this whole file later
+
 import { Router } from 'express';
 
 let people = [
