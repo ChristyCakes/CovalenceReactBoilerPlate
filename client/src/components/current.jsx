@@ -1,3 +1,5 @@
+// Current component displays heading and current chirps
+
 import React from 'react';
 
 const Current = (props) => {
@@ -10,7 +12,12 @@ const Current = (props) => {
             </div>)
     }
     chirpDisplay.pop()
-    return <div>{chirpDisplay}</div>
+    return (
+        <div className="current">
+            <h2>Current Chirps</h2>
+            <div>{chirpDisplay}</div>
+        </div>
+    )
 }
 
 export default Current;
