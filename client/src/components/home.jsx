@@ -9,12 +9,7 @@ import NewChirp from './newChirp'
 class Home extends Component {
     constructor() {
         super();
-        this.state = { 
-            chirps: {},
-            user: "",
-            text: ""
-        }
-        this.inputHandler = this.inputHandler.bind(this)
+        this.state = { chirps: {} }
     }
 
     componentDidMount() {
@@ -32,10 +27,6 @@ class Home extends Component {
             .catch(err => console.log(err))
     }
 
-    inputHandler(e) {
-        this.setState({ [e.target.name]: e.target.value })
-    }
-
     render() {
         return (
             <div>
@@ -43,9 +34,7 @@ class Home extends Component {
                     <img src={logo} alt="logo" height="300px" />
                     <h1>Chirper</h1>
                 </div>
-                <NewChirp 
-                inputHandler={this.inputHandler} user={this.state.user} text={this.state.text}
-                />
+                <NewChirp />
                 <Current chirps={this.state.chirps} />
             </div>
         );
