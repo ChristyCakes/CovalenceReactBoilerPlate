@@ -20,14 +20,14 @@ class NewChirp extends Component {
     fetchChirps() {
         fetch('http://127.0.0.1:3000/api/chirps/', {
             method: "POST",
-            contentType: "application/json; charset=utf-8",
-            // contentType: "application/x-www-form-urlencoded",
+            headers: {
+                "Content-Type": "application/json"
+            },            
             body: JSON.stringify({
-                "user": this.state.user,
-                "text": this.state.text,
+                user: this.state.user,
+                text: this.state.text,
             })
         })
-            .then(response => console.log(response))
             .catch(err => console.log(err))
     }
 
