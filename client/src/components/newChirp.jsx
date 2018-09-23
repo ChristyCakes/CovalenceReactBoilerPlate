@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 class NewChirp extends Component {
     constructor() {
         super();
-        this.state = { 
+        this.state = {
             user: "",
             text: ""
         }
@@ -22,7 +22,7 @@ class NewChirp extends Component {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
-            },            
+            },
             body: JSON.stringify({
                 user: this.state.user,
                 text: this.state.text,
@@ -34,7 +34,7 @@ class NewChirp extends Component {
     render() {
         return (
             <div>
-                <div className="input"></div>
+                <div className="input">
                 <form action="">
                     <input
                         type="text"
@@ -54,8 +54,13 @@ class NewChirp extends Component {
                         onChange={this.inputHandler}
                         defaultValue={this.state.text}
                     />
-                    <button onClick={this.fetchChirps} id="submit">Submit</button>
+                    <button
+                        onClick={this.fetchChirps}
+                        id="submit">
+                        Submit
+                    </button>
                 </form>
+                </div>
             </div >
         )
     }
