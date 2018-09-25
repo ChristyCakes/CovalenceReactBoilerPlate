@@ -10,7 +10,7 @@ class Chirp extends Component {
         super();
         this.state = {
             user: "",
-            text: ""
+            text: "",
         }
     }
 
@@ -24,10 +24,10 @@ class Chirp extends Component {
                 })
             })
             .catch(err => console.log(err))
-
     }
 
     render() {
+        console.log(this.state.editMode)
         return (
             <div>
                 <Fragment>
@@ -38,7 +38,15 @@ class Chirp extends Component {
                         <div className='chirps'>
                             <p>{this.state.user}: {this.state.text}</p>
                             <Fragment >
-                                <Link to={`/${this.props.match.params.id}/edit`}><button>Edit</button></Link>
+                                <Link to={{
+                                    pathname: `/${this.props.match.params.id}/edit`,
+                                    state: {
+                                        user: this.state.user,
+                                        text: this.state.text
+                                    }
+                                }}>
+                                    <button onClick={this.editClick}>Edit</button>
+                                </Link>
                             </Fragment>
                             <Fragment >
                                 <Link to={`/${this.props.match.params.id}/delete`}><button className="delete">x</button></Link>

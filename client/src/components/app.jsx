@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-// import HelloWorld from './hello';
 import Home from './home'
 import Chirp from './chirp'
 import Edit from './edit'
