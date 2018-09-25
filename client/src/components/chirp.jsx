@@ -1,8 +1,10 @@
-// Chirp component requests and displays single chirp
+// Chirp component requests and displays single chirp sends props for editing, deleting
 
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import 'isomorphic-fetch';
+import Delete from './delete'
+import Edit from './edit'
 
 class Chirp extends Component {
 
@@ -30,12 +32,14 @@ class Chirp extends Component {
         return (
             <div>
                 <Fragment>
-                    <Link to="/">Home</Link>
+                    <Link to="/" className="homelink" style={{ textDecoration: "none" }}>Home</Link>
                 </Fragment>
                 <div className="current">
                     <div className="flex-column">
                         <div className='chirps'>
                             <p>{this.state.user}: {this.state.text}</p>
+                            <Edit id={this.props.match.params.id}/>
+                            <Delete id={this.props.match.params.id}/>
                         </div>
                     </div>
                 </div>
