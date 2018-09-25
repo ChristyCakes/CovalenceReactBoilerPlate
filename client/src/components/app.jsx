@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 // import HelloWorld from './hello';
 import Home from './home'
 import Chirp from './chirp'
-import Delete from './delete'
 import Edit from './edit'
+import Delete from './delete'
 
 class Navigation extends Component {
 
@@ -14,6 +14,8 @@ class Navigation extends Component {
                 <Fragment>
                     <Switch>
                         <Route exact path="/" component={Home} />
+                        <Route path="/:id/edit" component={Edit} />
+                        <Route path="/:id/delete" component={Delete} />
                         <Route path="/:id" component={Chirp} />
                     </Switch>
                 </Fragment>

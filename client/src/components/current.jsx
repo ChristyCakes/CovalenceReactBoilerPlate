@@ -1,4 +1,4 @@
-// Current component displays heading and current chirps
+// Current component displays heading, current chirps, and details button/route
 
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';

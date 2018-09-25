@@ -1,4 +1,4 @@
-// Home component displays logo, calls API, sends props to Current component, sends props to NewChirp component, handles input submit button
+// Home component displays logo, calls API, sets chirps state, sends props to Current component, sends props to NewChirp component
 
 import React, { Component } from 'react';
 import 'isomorphic-fetch';
