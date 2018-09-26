@@ -1,5 +1,2 @@
-// export * from './films/Film'
-// export * from './people/PeopleArray'
-export * from './home'
-// export * from './films/FilmsArray'
-// export * from './people/Person'
+// Do I need this file?
+// export * from './home'

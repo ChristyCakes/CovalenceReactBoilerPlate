@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Link } from 'react-router-dom';
 import 'isomorphic-fetch';
 
 class Chirp extends Component {
-
     constructor() {
         super();
         this.state = {
@@ -27,10 +26,9 @@ class Chirp extends Component {
     }
 
     render() {
-        console.log(this.state.editMode)
         return (
             <div>
-                <Fragment>
+                <Fragment >
                     <Link to="/" className="homelink" style={{ textDecoration: "none" }}>Home</Link>
                 </Fragment>
                 <div className="current">
@@ -47,8 +45,6 @@ class Chirp extends Component {
                                 }}>
                                     <button onClick={this.editClick}>Edit</button>
                                 </Link>
-                            </Fragment>
-                            <Fragment >
                                 <Link to={`/${this.props.match.params.id}/delete`}><button className="delete">x</button></Link>
                             </Fragment>
                         </div>

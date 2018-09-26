@@ -15,7 +15,6 @@ const Current = (props) => {
                         <button className="details">Details</button>
                     </Link>
                 </Fragment>
-
             </div>)
     }
     chirpDisplay.pop()
