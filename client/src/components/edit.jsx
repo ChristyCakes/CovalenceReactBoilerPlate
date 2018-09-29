@@ -1,7 +1,7 @@
 // Edit component displays inputs for editing single chirp, sends PUT request onClick
 
 import React, { Component, Fragment } from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { withRouter, BrowserRouter as Router, Link } from 'react-router-dom';
 import 'isomorphic-fetch';
 
 class Edit extends Component {
@@ -13,6 +13,7 @@ class Edit extends Component {
         }
         this.editChirp = this.editChirp.bind(this);
         this.inputHandler = this.inputHandler.bind(this)
+        // this.redirect = this.redirect.bind(this)
     }
 
     inputHandler(e) {
@@ -30,18 +31,36 @@ class Edit extends Component {
                 text: this.state.text
             })
         })
-            .catch(err => console.log(err))
-    }
+            // .then(() => this.props.history.push('/'))
+            // .then(() => this.context.history.push('/'))
+            // .then(() => <Redirect to='/' />
+            // .then(() => this.redirect)
+            
+            // .then(() => console.log('put request putted'))
+            // .catch(err => console.log(err))
+    
+    
+            .then(response => {
+                return response.json().then(data => {
+                  if (response.ok) {
+                    return data;
+                  } else {
+                    return Promise.reject({status: response.status, data});
+                  }
+                });
+              })
+              .then(result => console.log('success:', result))
+              .catch(error => console.log('error:', error));
+        }
+
+    // redirect() {
+    //     //this.props.history.push('/');
+    //     window.location.href = 'http://localhost:300/'
+    // }
 
     render() {
-        const user = this.props.location.state.user;
-        const text = this.props.location.state.text;
-        
-        console.log("id:", this.props.match.params.id)
-        console.log("this.state.user: ", this.state.user)
-        console.log("this.state.text: ", this.state.text)
-
-
+        // const user = this.props.location.state.user;
+        // const text = this.props.location.state.text;
         return (
             <div>
                 <Fragment>
@@ -52,7 +71,8 @@ class Edit extends Component {
                     <form action="">
                         <input
                             type="text"
-                            placeholder={user}
+                            // placeholder={this.props.location.state.user}
+                            placeholder="sha na"
                             size="10"
                             id="user"
                             name="user"
@@ -61,7 +81,8 @@ class Edit extends Component {
                         />
                         <input
                             type="text"
-                            placeholder={text}
+                            // placeholder={this.props.location.state.text}
+                            placeholder="na na na na"
                             size="60"
                             id="text"
                             name="text"
@@ -71,13 +92,14 @@ class Edit extends Component {
                         <button
                             onClick={this.editChirp}
                             id="submit">
-                            Submit
+                            Update
                     </button>
                     </form>
                 </div>
+
             </div>
         )
     }
 }
 
-export default Edit;
+export default withRouter(Edit);
