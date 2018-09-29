@@ -36,6 +36,15 @@ module.exports = {
                         outputPath: 'docs'
                     }
                 }
+            },
+            {
+                test: /\.css$/,
+                loader: ['style-loader', 'css-loader'],
+                // why not need these
+                // options: {
+                //     publicPath: '/dist/styles',
+                //     outputPath: 'styles'
+                // }
             }
         ]
     },

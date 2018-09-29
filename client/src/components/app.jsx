@@ -1,11 +1,12 @@
 import React, { Component, Fragment } from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './home'
 import Chirp from './chirp'
 import Edit from './edit'
 import Delete from './delete'
+import '../styles.css'
 
-class Navigation extends Component {
+class App extends Component {
 
     render() {
         return (
@@ -23,4 +24,4 @@ class Navigation extends Component {
     }
 }
 
-export default Navigation;
+export default App;
