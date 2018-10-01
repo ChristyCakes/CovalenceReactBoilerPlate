@@ -39,6 +39,8 @@
   },
   "devDependencies": {
     "concurrently": "^3.5.1",
+    "eslint": "^5.6.1",
+    "eslint-config-google": "^0.10.0",
     "nodemon": "^1.17.3"
   }
 }
