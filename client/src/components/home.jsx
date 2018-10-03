@@ -18,11 +18,6 @@ class Home extends Component {
             .then(response => response.json())
             .then(data => {
                 this.setState({ chirps: data })
-
-                // remove later
-                // console.log("this.state here: ", this.state)
-                // console.log("this.state.chirps here: ", this.state.chirps)
-
             })
             .catch(err => console.log(err))
     }

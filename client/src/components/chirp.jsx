@@ -1,4 +1,4 @@
-// Chirp component requests and displays single chirp & edit button, & sends props for editing, deleting
+// Chirp component requests and displays single chirp, edit & delete button, & sends props for editing, deleting
 
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
@@ -36,10 +36,6 @@ class Chirp extends Component {
                         <div className='chirps'>
                             <p>{this.state.user}: {this.state.text}</p>
                             <Fragment >
-                                <Link to={`/${this.props.match.params.id}/delete`}><button className="delete">x</button></Link>
-                            </Fragment>
-
-                            <Fragment >
                                 <Link to={{
                                     pathname: `/${this.props.match.params.id}/edit`,
                                     state: {
@@ -49,6 +45,7 @@ class Chirp extends Component {
                                 }}>
                                     <button onClick={this.editClick}>Edit</button>
                                 </Link>
+                                <Link to={`/${this.props.match.params.id}/delete`}><button className="delete">x</button></Link>
                             </Fragment>
                         </div>
                     </div>

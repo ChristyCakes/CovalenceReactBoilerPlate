@@ -1,4 +1,4 @@
-// Delete component sends delete request to api, reroutes to home page
+// Delete component sends delete request to api, confirms, reroutes to home page
 
 import React, { Component } from 'react';
 import 'isomorphic-fetch';

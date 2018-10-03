@@ -1,4 +1,4 @@
-// Edit component displays inputs for editing single chirp, sends PUT request onClick
+// Edit component displays inputs for editing single chirp, sends PUT request onClick, reroutes to home
 
 import React, { Component, Fragment } from 'react';
 import { withRouter, BrowserRouter as Router, Link } from 'react-router-dom';
