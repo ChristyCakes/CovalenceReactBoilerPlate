@@ -18,4 +18,4 @@ class Delete extends Component {
     render() { return null }
 }
 
-export default Delete;
+export { Delete };

@@ -55,4 +55,4 @@ class Chirp extends Component {
     }
 }
 
-export default Chirp;
+export { Chirp };

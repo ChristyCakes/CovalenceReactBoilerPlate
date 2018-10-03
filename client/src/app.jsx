@@ -2,11 +2,8 @@
 
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from './home'
-import Chirp from './chirp'
-import Edit from './edit'
-import Delete from './delete'
-import '../styles.css'
+import { Home, Chirp, Edit, Delete } from './components';
+import './styles.css';
 
 class App extends Component {
 

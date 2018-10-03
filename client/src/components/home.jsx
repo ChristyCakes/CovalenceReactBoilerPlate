@@ -13,7 +13,6 @@ class Home extends Component {
     }
 
     componentDidMount() {
-
         fetch('http://127.0.0.1:3000/api/chirps')
             .then(response => response.json())
             .then(data => {
@@ -36,4 +35,4 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export { Home };

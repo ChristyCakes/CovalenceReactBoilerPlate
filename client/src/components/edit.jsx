@@ -1,7 +1,7 @@
 // Edit component displays inputs for editing single chirp, sends PUT request onClick, reroutes to home
 
 import React, { Component, Fragment } from 'react';
-import { withRouter, BrowserRouter as Router, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import 'isomorphic-fetch';
 
 class Edit extends Component {
@@ -77,4 +77,4 @@ class Edit extends Component {
     }
 }
 
-export default withRouter(Edit);
+export { Edit };
