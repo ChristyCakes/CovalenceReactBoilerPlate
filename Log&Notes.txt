@@ -1,0 +1,82 @@
+Run in development mode
+
+in terminal:
+
+//start react server
+npm run dev from project folder
+
+// start react front end
+new window, url: local host on webbrowser
+
+
+
+
+LOG  --- about 34 hrs (before review) -- largest problem 4hrs ---
+
+Wed:
+    Solved .then problem with help of Covalence (0.5hrs)
+    added index to components folder
+    cleaned up code
+    submitted for review
+    T: 2.5
+
+Sat:
+    solved css error (1.25 hrs)
+        found MIME type error, added lines to webpackconfig, installed style loader & css-loader, deleted css link in html
+        ? question in webpackconfig
+    .then problem (stuck 1.75 more hrs)
+    T: 3hrs
+
+Thur:
+    (& Wed) send Edward error (0.25)
+
+Wed:
+    created component flowchart
+    put req 'user' problem (1.5hrs)
+    stack overflow options
+    T: 3.5 hrs
+
+Tue:
+    Worked on delete page
+    Solved edit route problem (stuck 1 hr)
+    Solved error in delete component, learned & implemented history
+    stuck on passing text/user props to edit component (2 hrs)
+    T: 6 hrs
+
+Mon: 
+    coded details route to display one chirp
+    T: 1 hr
+
+Sun:
+    Formatting for home page
+    Flexbox learning to add and format the details button
+    made details route
+    T: 2 hrs
+
+Fri:
+    fetch & related problems solved (1 more hr)
+    solved fetch post problem (4 hrs)
+    T: 5hrs
+
+Thur: 
+    solved destructuring (1.5hrs more)
+    finished Home page display & styling (logo, input boxes, etc)
+    displayed chirps
+    moved chirps display to separate component
+    coded grabbing input values & setState
+    ended stuck on fetch from submit button (0.5hrs)
+    T: 5.25 hrs
+
+Wed: 
+    got server running
+    solved 2 problems
+    ended with problem(destructuring state, 45 mins)
+    T: 4 hrs
+
+
+Tue: 
+    began converting server and jquery to react (from ghibli routing-lab and jquery expressapi)
+    ended with problem(react server crashing)
+    T: 1.5 hrs
+
+started Tue night 9/18
