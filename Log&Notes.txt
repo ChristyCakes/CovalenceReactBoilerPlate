@@ -13,6 +13,10 @@ new window, url: local host on webbrowser
 
 LOG  --- about 34 hrs (before review) -- largest problem 4hrs ---
 
+Thur:
+    made improvements from review
+    T: 1.5
+
 Wed:
     Solved .then problem with help of Covalence (0.5hrs)
     added index to components folder

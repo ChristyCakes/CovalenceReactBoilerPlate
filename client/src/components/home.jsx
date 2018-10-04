@@ -1,4 +1,4 @@
-// Home component displays logo, calls API, sets chirps state, sends props to Current component, sends props to NewChirp component
+// Home component displays logo, get requests all chirps
 
 import React, { Component } from 'react';
 import 'isomorphic-fetch';
