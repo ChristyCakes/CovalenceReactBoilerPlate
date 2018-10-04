@@ -22,31 +22,30 @@ class Chirp extends Component {
                     text: data.text
                 })
             })
-            .catch(err => console.log(err))
+            .catch(err => {
+                alert("Chirp failed to load");
+                console.log(err);
+            })
     }
 
     render() {
         return (
             <div>
-                <Fragment >
-                    <Link to="/" className="homelink" style={{ textDecoration: "none" }}>Home</Link>
-                </Fragment>
+                <Link to="/" className="homelink" style={{ textDecoration: "none" }}>Home</Link>
                 <div className="current">
                     <div className="flex-column">
                         <div className='chirps'>
                             <p>{this.state.user}: {this.state.text}</p>
-                            <Fragment >
-                                <Link to={{
-                                    pathname: `/${this.props.match.params.id}/edit`,
-                                    state: {
-                                        user: this.state.user,
-                                        text: this.state.text
-                                    }
-                                }}>
-                                    <button onClick={this.editClick}>Edit</button>
-                                </Link>
-                                <Link to={`/${this.props.match.params.id}/delete`}><button className="delete">x</button></Link>
-                            </Fragment>
+                            <Link to={{
+                                pathname: `/${this.props.match.params.id}/edit`,
+                                state: {
+                                    user: this.state.user,
+                                    text: this.state.text
+                                }
+                            }}>
+                                <button onClick={this.editClick}>Edit</button>
+                            </Link>
+                            <Link to={`/${this.props.match.params.id}/delete`}><button className="delete">x</button></Link>
                         </div>
                     </div>
                 </div>

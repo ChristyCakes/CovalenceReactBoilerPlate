@@ -28,7 +28,10 @@ class NewChirp extends Component {
                 text: this.state.text,
             })
         })
-            .catch(err => console.log(err))
+            .catch(err => {
+                alert("Error: Your chirp was not succesfully created");
+                console.log(err);
+            })
     }
 
     render() {

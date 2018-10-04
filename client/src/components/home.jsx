@@ -18,7 +18,10 @@ class Home extends Component {
             .then(data => {
                 this.setState({ chirps: data })
             })
-            .catch(err => console.log(err))
+            .catch(err => {
+                alert("Chirps failed to load");
+                console.log(err);
+            })
     }
 
     render() {

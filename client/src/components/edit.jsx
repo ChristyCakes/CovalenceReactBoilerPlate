@@ -32,7 +32,10 @@ class Edit extends Component {
             })
         })
             .then(() => this.props.history.push('/'))
-            .catch(err => console.log(err))
+            .catch(err => {
+                alert("Error: Chirp not updated");
+                console.log(err);
+            })
         }
 
     render() {
@@ -40,12 +43,10 @@ class Edit extends Component {
         const text = this.props.location.state.text;
         return (
             <div>
-                <Fragment>
                     <Link to="/" className="homelink" style={{ textDecoration: "none" }}>Home</Link>
-                </Fragment>
                 <h2>Edit Your Chirp</h2>
                 <div className="input">
-                    <form action="">
+                    <form>
                         <input
                             type="text"
                             placeholder={user}
